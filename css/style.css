@@ -1,6 +1,7 @@
 /* montserrat-regular - latin_cyrillic */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
   src: local(''),
@@ -10,6 +11,7 @@
 /* montserrat-600 - latin_cyrillic */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 600;
   src: local(''),
@@ -19,6 +21,7 @@
 /* montserrat-700 - latin_cyrillic */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 700;
   src: local(''),
@@ -28,6 +31,7 @@
 /* montserrat-800 - latin_cyrillic */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 800;
   src: local(''),
@@ -402,20 +406,20 @@ html {
 
 .swiper-slide-pic1 {
   position: relative;
-  background: url('../img/low-angle-photo-of-balconies.png') center center no-repeat transparent;
+  background: url('../img/photo-of-balconies.webp') center center no-repeat transparent;
   background-size: cover;
 
 }
 
 .swiper-slide-pic2 {
   position: relative;
-  background: url('../img/brown-and-blue-glass-building-2093076.jpg') center center no-repeat transparent;
+  background: url('../img/brown-and-blue-glass-building.webp') center center no-repeat transparent;
   background-size: cover;
 }
 
 .swiper-slide-pic3 {
   position: relative;
-  background: url('../img/apartment-apartment-building-architecture-building-323705.jpg') center center no-repeat transparent;
+  background: url('../img/apartment-apartment-building.webp') center center no-repeat transparent;
   background-size: cover;
 }
 
@@ -662,7 +666,7 @@ html {
 
 .section-about__picture {
   position: relative;
-  background: url('../img/Rectangle\ 2.png') center center no-repeat transparent;
+  background: url('../img/Worker.webp') center center no-repeat transparent;
   background-size: auto;
   background-position: left;
   height: 622px;
@@ -1073,26 +1077,9 @@ html {
   position: relative;
   margin-left: 138px;
   margin-top: 54px;
-  background-size: contain;
-  background-position: right;
+  object-fit: contain;
   width: 870px;
   height: 460px;
-}
-
-.section-how__picture1 {
-  background: url('../img/Rectangle\ 17.png') center center no-repeat transparent;
-}
-
-.section-how__picture2 {
-  background: url('../img/Rectangle\ 18.png') center center no-repeat transparent;
-}
-
-.section-how__picture3 {
-  background: url('../img/Rectangle\ 19.png') center center no-repeat transparent;
-}
-
-.section-how__picture4 {
-  background: url('../img/Rectangle\ 20.png') center center no-repeat transparent;
 }
 
 @media (max-width: 1919px) {
@@ -1100,8 +1087,7 @@ html {
     margin-left: 30px;
     margin-top: 60px;
     right: 20px;
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
     width: 700px;
     height: 460px;
   }

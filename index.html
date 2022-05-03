@@ -5,21 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <title>Евклид</title>
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <link rel="prefetch" href="fonts/montserrat-v16-latin_cyrillic-600.woff" as="font">
+  <link rel="preload" href="fonts/montserrat-v16-latin_cyrillic-600.woff2" as="font">
+  <link rel="prefetch" href="fonts/montserrat-v16-latin_cyrillic-700.woff" as="font">
+  <link rel="prefetch" href="fonts/montserrat-v16-latin_cyrillic-700.woff2" as="font">
+  <link rel="prefetch" href="fonts/montserrat-v16-latin_cyrillic-800.woff" as="font">
+  <link rel="preload" href="fonts/montserrat-v16-latin_cyrillic-800.woff2" as="font">
+  <link rel="prefetch" href="fonts/montserrat-v16-latin_cyrillic-regular.woff" as="font">
+  <link rel="prefetch" href="fonts/montserrat-v16-latin_cyrillic-regular.woff2" as="font">
 
-  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-    $(function () {
-      $("#accordion").accordion();
-    });
-  </script>
-  <script src="/js/burger.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
 <body class="body">
   <header class="header">
@@ -28,7 +25,7 @@
         <span></span>
       </div>
       <a href="" class="header__logo">
-        <img src="/img/Logo.png" alt="" class="logo-img">
+        <img src="img/Logo.png" alt="" class="logo-img">
       </a>
       <div class="header__nav">
         <div id="menu" class="nav is-active">
@@ -185,7 +182,11 @@
               </a>
             </div>
           </div>
-          <div class="section-how__picture section-how__picture1"></div>
+          <div class="section-how__picture">
+            <picture>
+              <img class="lazyload" data-src="img/Ingeneer.webp" alt="изображение" />
+            </picture>
+          </div>
         </div>
         <div class="tab-content" data-target="two">
           <div class="section-how__block">
@@ -208,7 +209,11 @@
               </a>
             </div>
           </div>
-          <div class="section-how__picture section-how__picture2"></div>
+          <div class="section-how__picture">
+            <picture>
+              <img class="lazyload" srcset="img/Logo_white.png" data-src="img/Signature.webp" alt="изображение" />
+            </picture>
+          </div>
         </div>
         <div class="tab-content" data-target="three">
           <div class="section-how__block">
@@ -233,7 +238,11 @@
               </a>
             </div>
           </div>
-          <div class="section-how__picture section-how__picture3"></div>
+          <div class="section-how__picture">
+            <picture>
+              <img class="lazyload" src="img/Notebook.webp" data-src="img/Notebook.webp" alt="изображение" />
+            </picture>
+          </div>
         </div>
         <div class="tab-content" data-target="four">
           <div class="section-how__block">
@@ -256,7 +265,11 @@
               </a>
             </div>
           </div>
-          <div class="section-how__picture section-how__picture4"></div>
+          <div class="section-how__picture">
+            <picture>
+              <img class="lazyload" srcset="img/Logo_white.png" data-src="img/Table.webp" alt="изображение" />
+            </picture>
+          </div>
         </div>
       </div>
     </section>
@@ -353,7 +366,7 @@
       <div class="footer__list">
         <div class="footer-item footer__item-left">
           <a href="" class="footer__logo">
-            <img src="/11_adaptive-layout-desktop/img/Logo_white.png" alt="" class="footer__logo-img">
+            <img src="img/Logo_white.png" alt="" class="footer__logo-img">
           </a>
           <p class="footer__menu">О нас</p>
           <p class="footer__menu">Проекты</p>
@@ -384,7 +397,7 @@
           <h2 class="footer__header">
             Оставить заявку
           </h2>
-          <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" class="form">
+          <form action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST" class="form">
             <div class="footer__block">
               <label>
                 <span class="visually-hidden">Введите Фамилию, имя и отчество</span>
@@ -421,6 +434,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper', {
             // Optional parameters
@@ -444,6 +458,17 @@
             //},
         });
   </script>
-  <script src="/11_adaptive-layout-desktop/js/tabs.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#accordion").accordion();
+    });
+
+    lazyload();
+  </script>
+  <script src="js/burger.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 </body>
 </html>
